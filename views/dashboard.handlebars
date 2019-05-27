@@ -1,0 +1,11 @@
+<h1 class="mt-4">Dashboard</h1>
+{{> messages }}
+<p class="lead mb-3">Welcome{{#if firstName}} {{firstName}}{{/if}}</p>
+{{!-- Display Dwolla Balance --}}
+{{#if customerURL}}{{else}}
+<a href="/dwolla/create-customer" class="btn btn-secondary">Create Customer</a>
+{{/if}}
+<a href="" class="btn btn-secondary">Attach Bank Account</a>
+<a href="" class="btn btn-secondary">Add Money</a>
+<a href="" class="btn btn-secondary">Remove Money</a>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>

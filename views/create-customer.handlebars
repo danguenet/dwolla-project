@@ -1,0 +1,59 @@
+<div class="row mt-5">
+	<div class="col-md-6 m-auto">
+		<div class="card card-body">
+			<h1 class="text-center mb-3">
+				<i class="fas fa-user-plus"></i> Create Customer
+			</h1>
+			{{> messages }}
+			<form action="/dwolla/customer" method="POST">
+				<div class="form-group">
+					<label for="firstName">First Name</label>
+					<input type="text" id="firstName" name="firstName" class="form-control" placeholder="Enter First Name"
+						value="{{#if requestBody.firstName}}{{requestBody.firstName}}{{/if}}" />
+				</div>
+				<div class="form-group">
+					<label for="lastName">Last Name</label>
+					<input type="text" id="lastName" name="lastName" class="form-control" placeholder="Enter Last Name"
+						value="{{#if requestBody.lastName}}{{requestBody.lastName}}{{/if}}" />
+				</div>
+				<div class="form-group">
+					<label for="address1">Address 1</label>
+					<input type="text" id="address1" name="address1" class="form-control" placeholder="Enter Address 1"
+						value="{{#if requestBody.address1}}{{requestBody.address1}}{{/if}}" />
+				</div>
+				<div class="form-group">
+					<label for="address2">Address 2</label>
+					<input type="text" id="address2" name="address2" class="form-control" placeholder="Enter Address 2"
+						value="{{#if requestBody.address2}}{{requestBody.address2}}{{/if}}" />
+				</div>
+				<div class="form-group">
+					<label for="city">City</label>
+					<input type="text" id="city" name="city" class="form-control" placeholder="Enter City"
+						value="{{#if requestBody.city}}{{requestBody.city}}{{/if}}" />
+				</div>
+				<div class="form-group">
+					<label for="state">State</label>
+					<input type="state" id="state" name="state" class="form-control" placeholder="Enter State"
+						value="{{#if requestBody.state}}{{requestBody.state}}{{/if}}" />
+				</div>
+				<div class="form-group">
+					<label for="postalCode">Postal Code</label>
+					<input type="postalCode" id="postalCode" name="postalCode" class="form-control"
+						placeholder="Enter Postal Code" value="{{#if requestBody.postalCode}}{{requestBody.postalCode}}{{/if}}" />
+				</div>
+				<div class="form-group">
+					<label for="dateOfBirth">Date of Birth</label>
+					<input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label for="ssn">Last 4 Digits of SSN</label>
+					<input type="text" id="ssn" name="ssn" class="form-control" placeholder="Enter Last 4 Digits of SSN" />
+				</div>
+				<button type="submit" class="btn btn-primary btn-block">
+					Create
+				</button>
+			</form>
+			<p class="lead mt-4">Not ready? <a href="/dashboard">Dashboard</a></p>
+		</div>
+	</div>
+</div>
