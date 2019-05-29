@@ -22,6 +22,8 @@ For the Dwolla integration, I am using a me to me payments flow with verified pe
 
 Feel free to use this code. You will need to set up your own local MongoDB. You will also need to setup your own keys.js and dwolla.js files within the config folder. I .gitignore these file that is in the config folder for security reasons.
 
+You also obviously need to make a [Dwolla Sandbox Account](https://accounts-sandbox.dwolla.com/sign-up). You can get the appKey & appSecret once you register.
+
 ### config/dwolla.js
 
 module.exports = {
@@ -36,3 +38,7 @@ module.exports = {
 MongoURI: "...",
 SessionSecret: "..."
 };
+
+## Project Status
+
+Currently you can create a customer and it will associate with your login. I plan to work on adding funding sources next.
