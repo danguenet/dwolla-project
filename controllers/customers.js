@@ -72,7 +72,7 @@ module.exports = {
             req.user.firstName = requestBody.firstName;
             req.user.save();
             req.flash("success_msg", "Customer created");
-            res.redirect("/dashboard");
+            res.redirect("/");
           })
           .catch(error => {
             if (error.status == 400) {
@@ -81,7 +81,7 @@ module.exports = {
             if (error.status === 403) {
               req.flash("error_msg", "Not authorized to create customers.");
             }
-            res.redirect("/dashboard");
+            res.redirect("/");
           })
       );
     }

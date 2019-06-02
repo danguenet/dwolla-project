@@ -5,7 +5,7 @@
 				<i class="fas fa-user-plus"></i> Create Customer
 			</h1>
 			{{> messages }}
-			<form action="/dwolla/customer" method="POST">
+			<form action="/customers" method="POST">
 				<div class="form-group">
 					<label for="firstName">First Name</label>
 					<input type="text" id="firstName" name="firstName" class="form-control" placeholder="Enter First Name"
@@ -53,7 +53,7 @@
 					Create
 				</button>
 			</form>
-			<p class="lead mt-4">Not ready? <a href="/dashboard">Dashboard</a></p>
+			<p class="lead mt-4">Not ready? <a href="/">Dashboard</a></p>
 		</div>
 	</div>
 </div>
