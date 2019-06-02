@@ -1,23 +1,8 @@
-const passport = require("passport");
 const bcrypt = require("bcryptjs");
 
 const User = require("../models/users");
 
 module.exports = {
-  login(req, res, next) {
-    passport.authenticate("local", {
-      successRedirect: "/dashboard",
-      failureRedirect: "/users/login",
-      failureFlash: true
-    })(req, res, next);
-  },
-
-  logout(req, res) {
-    req.logout();
-    req.flash("success_msg", "You are logged out");
-    res.redirect("/users/login");
-  },
-
   register(req, res) {
     const { email, password, password2 } = req.body;
     let errors = [];
@@ -76,5 +61,8 @@ module.exports = {
         }
       });
     }
+  },
+  view(req, res) {
+    res.render("register");
   }
 };

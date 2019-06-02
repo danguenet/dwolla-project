@@ -8,8 +8,6 @@ const session = require("express-session");
 
 // Routes
 const routes = require("./routes");
-const userRoutes = require("./routes/users.js");
-const dwollaRoutes = require("./routes/dwolla.js");
 
 const keys = require("./config/keys");
 
@@ -60,8 +58,6 @@ app.use(function(req, res, next) {
 
 // Routes
 app.use("/", routes);
-app.use("/users", userRoutes);
-app.use("/dwolla", dwollaRoutes);
 
 // Serving static files
 app.use(express.static(path.join(__dirname, "public")));

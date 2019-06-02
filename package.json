@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "dev": "nodemon app"
+    "dev": "nodemon app",
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +25,8 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "nodemon": "^1.19.0"
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.0",
+    "supertest": "^4.0.2"
   }
 }

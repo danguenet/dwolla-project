@@ -1,7 +1,8 @@
 const uuidv4 = require("uuid/v4");
-const helpers = require("../utils");
 const dwolla = require("dwolla-v2");
+
 const dwollaKeys = require("../config/dwolla");
+const helpers = require("../utils");
 
 const client = new dwolla.Client({
   key: dwollaKeys.appKey,
@@ -84,5 +85,8 @@ module.exports = {
           })
       );
     }
+  },
+  view(req, res) {
+    res.render("create-customer");
   }
 };
